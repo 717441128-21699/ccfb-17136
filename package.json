@@ -1,0 +1,28 @@
+{
+  "name": "curling-flow-replay",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Object-aware WebGPU frame interpolation for curling slow-motion replays",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "vitest run",
+    "benchmark": "tsx scripts/benchmark.ts",
+    "perf": "tsx scripts/performance.ts",
+    "render:clips": "tsx scripts/render-test-clips.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "mp4-muxer": "^5.2.2",
+    "mp4box": "^0.5.2"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.8.3",
+    "vite": "^7.0.0",
+    "vitest": "^3.2.4"
+  }
+}
