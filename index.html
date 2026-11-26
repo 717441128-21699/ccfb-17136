@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark" />
+    <title>冰壶慢动作插值工作台 · Curling Slow-Mo Studio</title>
+  </head>
+  <body>
+    <div id="app" class="app-shell">
+      <header class="topbar">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" width="30" height="30">
+              <circle cx="16" cy="17" r="11" fill="#2b3a4d" stroke="#7d93ab" stroke-width="1.6"/>
+              <circle cx="16" cy="17" r="7.2" fill="#c8d4e0"/>
+              <circle cx="16" cy="17" r="4.1" fill="#c8323c"/>
+              <rect x="11.5" y="6.5" width="9" height="3.4" rx="1.7" fill="#e23b44"/>
+            </svg>
+          </span>
+          <div class="brand-text">
+            <h1>冰壶慢动作插值工作台</h1>
+            <span class="brand-sub">CURLING SLOW-MO · OBJECT-AWARE FRAME INTERPOLATION</span>
+          </div>
+        </div>
+        <div class="topbar-right">
+          <span id="engine-badge" class="engine-badge engine-checking">引擎检测中…</span>
+        </div>
+      </header>
+
+      <nav class="steps" id="steps-nav" aria-label="工作流程">
+        <button class="step-tab" data-tab="import" type="button">
+          <span class="step-num">1</span>
+          <span class="step-label">录像导入</span>
+          <span class="step-dot" aria-hidden="true"></span>
+        </button>
+        <span class="step-connector" aria-hidden="true"></span>
+        <button class="step-tab" data-tab="motion" type="button">
+          <span class="step-num">2</span>
+          <span class="step-label">运动估计</span>
+          <span class="step-dot" aria-hidden="true"></span>
+        </button>
+        <span class="step-connector" aria-hidden="true"></span>
+        <button class="step-tab" data-tab="preview" type="button">
+          <span class="step-num">3</span>
+          <span class="step-label">慢放预览</span>
+          <span class="step-dot" aria-hidden="true"></span>
+        </button>
+        <span class="step-connector" aria-hidden="true"></span>
+        <button class="step-tab" data-tab="export" type="button">
+          <span class="step-num">4</span>
+          <span class="step-label">导出成片</span>
+          <span class="step-dot" aria-hidden="true"></span>
+        </button>
+      </nav>
+
+      <main id="view" class="view" tabindex="-1"></main>
+
+      <footer class="statusbar" id="statusbar">
+        <span class="status-item" id="status-clip">尚未导入片段</span>
+        <span class="status-spacer"></span>
+        <span class="status-item status-hint">本地浏览器运算 · 画面不会上传</span>
+      </footer>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

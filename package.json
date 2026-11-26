@@ -1,0 +1,29 @@
+{
+  "name": "curling-slowmo",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Object-aware WebGPU frame interpolation for curling slow-motion replay",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "verify": "vitest run tests/metrics.test.ts",
+    "render:clips": "node --max-old-space-size=4096 --experimental-strip-types scripts/render-clips.ts",
+    "benchmark:1080p": "node --max-old-space-size=4096 --experimental-strip-types scripts/benchmark-1080p.ts",
+    "benchmark:1080p:quick": "node --experimental-strip-types scripts/benchmark-1080p.ts --seconds=1 --max-intervals=8"
+  },
+  "dependencies": {
+    "mp4-muxer": "^5.2.0",
+    "mp4box": "^0.5.4"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.4",
+    "@webgpu/types": "^0.1.66",
+    "typescript": "^5.9.3",
+    "vite": "^7.1.12",
+    "vitest": "^4.0.8"
+  }
+}
